@@ -1,1 +1,1 @@
-# comics-info-domain
+# ComicsInfoDomain
