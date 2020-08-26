@@ -37,4 +37,26 @@ public struct Series: Codable {
     /// ID of the series which follows this series.
     public let nextIdentifier: String?
 
+    public init(
+        identifier: String,
+        popularity: Int,
+        title: String,
+        description: String?,
+        startYear: Int?,
+        endYear: Int?,
+        thumbnail: String?,
+        charactersID: Set<String>,
+        nextIdentifier: String?
+    ) {
+        self.identifier = identifier
+        self.popularity = popularity
+        self.title = title
+        self.description = description
+        self.startYear = startYear
+        self.endYear = endYear
+        self.thumbnail = thumbnail
+        self.charactersID = charactersID
+        self.nextIdentifier = nextIdentifier
+    }
+
 }

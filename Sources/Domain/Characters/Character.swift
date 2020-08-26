@@ -25,4 +25,18 @@ public struct Character: Codable {
     ///  A short bio or description of the character
     public let description: String?
 
+    public init(
+        identifier: String,
+        popularity: Int,
+        name: String,
+        thumbnail: String?,
+        description: String?
+    ) {
+        self.identifier = identifier
+        self.popularity = popularity
+        self.name = name
+        self.thumbnail = thumbnail
+        self.description = description
+    }
+
 }

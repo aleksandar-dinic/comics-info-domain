@@ -62,4 +62,40 @@ public struct Comic: Codable {
     /// The date of publication for this comic.
     public let published: Date?
 
+    public init(
+        identifier: String,
+        popularity: Int,
+        title: String,
+        thumbnail: String?,
+        issueNumber: String?,
+        description: String?,
+        variantDescription: String?,
+        format: String?,
+        pageCount: Int?,
+        variantsIdentifier: [String]?,
+        collectionsIdentifier: [String]?,
+        collectedIssuesIdentifier: [String]?,
+        images: [String]?,
+        seriesID: Set<String>,
+        charactersID: Set<String>,
+        published: Date?
+    ) {
+        self.identifier = identifier
+        self.popularity = popularity
+        self.title = title
+        self.thumbnail = thumbnail
+        self.issueNumber = issueNumber
+        self.description = description
+        self.variantDescription = variantDescription
+        self.format = format
+        self.pageCount = pageCount
+        self.variantsIdentifier = variantsIdentifier
+        self.collectionsIdentifier = collectionsIdentifier
+        self.collectedIssuesIdentifier = collectedIssuesIdentifier
+        self.images = images
+        self.seriesID = seriesID
+        self.charactersID = charactersID
+        self.published = published
+    }
+
 }
