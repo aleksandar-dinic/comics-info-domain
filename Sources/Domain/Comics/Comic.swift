@@ -13,7 +13,7 @@ public struct Comic: Codable {
     /// The unique ID of the comic resource.
     public let identifier: String
 
-    /// The value of comic popularity
+    /// The value of comic popularity.
     public let popularity: Int
 
     /// The canonical title of the comic.
@@ -22,11 +22,11 @@ public struct Comic: Codable {
     /// The representative image for this comics.
     public let thumbnail: String?
 
-    /// The number of the issue in the series.
-    public let issueNumber: String?
-
     /// The preferred description of the comic.
     public let description: String?
+
+    /// The number of the issue in the series.
+    public let issueNumber: String?
 
     /// If the issue is a variant (e.g. an alternate cover, second printing, or director’s cut),
     /// a text description of the variant.
@@ -53,22 +53,22 @@ public struct Comic: Codable {
     /// A list of promotional images associated with this comic.
     public let images: [String]?
 
-    /// A resource list containing series ID to which this comic belongs.
-    public let seriesID: Set<String>
-
-    /// A resource list containing characters ID which appear in this comic.
-    public let charactersID: Set<String>
-
     /// The date of publication for this comic.
     public let published: Date?
+
+    /// A resource list containing the characters which appear in this comic.
+    public let characters: [Character]?
+
+    /// A resource list containing the series in which this comic appears.
+    public let series: [Series]?
 
     public init(
         identifier: String,
         popularity: Int,
         title: String,
         thumbnail: String?,
-        issueNumber: String?,
         description: String?,
+        issueNumber: String?,
         variantDescription: String?,
         format: String?,
         pageCount: Int?,
@@ -76,16 +76,16 @@ public struct Comic: Codable {
         collectionsIdentifier: [String]?,
         collectedIssuesIdentifier: [String]?,
         images: [String]?,
-        seriesID: Set<String>,
-        charactersID: Set<String>,
-        published: Date?
+        published: Date?,
+        characters: [Character]?,
+        series: [Series]?
     ) {
         self.identifier = identifier
         self.popularity = popularity
         self.title = title
         self.thumbnail = thumbnail
-        self.issueNumber = issueNumber
         self.description = description
+        self.issueNumber = issueNumber
         self.variantDescription = variantDescription
         self.format = format
         self.pageCount = pageCount
@@ -93,9 +93,9 @@ public struct Comic: Codable {
         self.collectionsIdentifier = collectionsIdentifier
         self.collectedIssuesIdentifier = collectedIssuesIdentifier
         self.images = images
-        self.seriesID = seriesID
-        self.charactersID = charactersID
         self.published = published
+        self.characters = characters
+        self.series = series
     }
 
 }
