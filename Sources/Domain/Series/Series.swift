@@ -30,6 +30,9 @@ public struct Series: Codable {
 
     /// The last year of publication for the series (conventionally, nil for ongoing series).
     public let endYear: Int?
+    
+    /// List of aliases the series is known by.
+    public let aliases: [String]?
 
     /// ID of the series which follows this series.
     public let nextIdentifier: String?
@@ -48,6 +51,7 @@ public struct Series: Codable {
         description: String?,
         startYear: Int?,
         endYear: Int?,
+        aliases: [String]?,
         nextIdentifier: String?,
         characters: [Character]?,
         comics: [Comic]?
@@ -59,6 +63,7 @@ public struct Series: Codable {
         self.description = description
         self.startYear = startYear
         self.endYear = endYear
+        self.aliases = aliases
         self.nextIdentifier = nextIdentifier
         self.characters = characters
         self.comics = comics
