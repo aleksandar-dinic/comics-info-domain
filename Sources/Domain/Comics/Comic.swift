@@ -27,6 +27,9 @@ public struct Comic: Codable {
 
     /// The number of the issue in the series.
     public let issueNumber: String?
+    
+    /// List of aliases the comic is known by.
+    public let aliases: [String]?
 
     /// If the issue is a variant (e.g. an alternate cover, second printing, or director’s cut),
     /// a text description of the variant.
@@ -69,6 +72,7 @@ public struct Comic: Codable {
         thumbnail: String?,
         description: String?,
         issueNumber: String?,
+        aliases: [String]?,
         variantDescription: String?,
         format: String?,
         pageCount: Int?,
@@ -86,6 +90,7 @@ public struct Comic: Codable {
         self.thumbnail = thumbnail
         self.description = description
         self.issueNumber = issueNumber
+        self.aliases = aliases
         self.variantDescription = variantDescription
         self.format = format
         self.pageCount = pageCount
