@@ -38,10 +38,10 @@ public struct Series: Codable {
     public let nextIdentifier: String?
 
     /// A resource list containing characters which appear in comics in this series.
-    public let characters: [Character]?
+    public let characters: [ItemSummary]?
 
     /// A resource list containing comics in this series.
-    public let comics: [Comic]?
+    public let comics: [ItemSummary]?
 
     public init(
         identifier: String,
@@ -53,8 +53,8 @@ public struct Series: Codable {
         endYear: Int?,
         aliases: [String]?,
         nextIdentifier: String?,
-        characters: [Character]?,
-        comics: [Comic]?
+        characters: [ItemSummary]?,
+        comics: [ItemSummary]?
     ) {
         self.identifier = identifier
         self.popularity = popularity

@@ -35,10 +35,10 @@ public struct Character: Codable {
     public let birth: Date?
 
     /// A resource list of series in which this character appears.
-    public let series: [Series]?
+    public let series: [ItemSummary]?
 
     /// A resource list containing comics which feature this character.
-    public let comics: [Comic]?
+    public let comics: [ItemSummary]?
 
     public init(
         identifier: String,
@@ -49,8 +49,8 @@ public struct Character: Codable {
         realName: String?,
         aliases: [String]?,
         birth: Date?,
-        series: [Series]?,
-        comics: [Comic]?
+        series: [ItemSummary]?,
+        comics: [ItemSummary]?
     ) {
         self.identifier = identifier
         self.popularity = popularity
