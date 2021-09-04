@@ -33,6 +33,9 @@ public struct Character: Codable {
     
     /// A date, that the character was born on. Not an origin date.
     public let birth: Date?
+    
+    /// A resource list of the main series of this character.
+    public let mainSeries: [SeriesSummary]?
 
     /// A resource list of series in which this character appears.
     public let series: [SeriesSummary]?
@@ -49,6 +52,7 @@ public struct Character: Codable {
         realName: String?,
         aliases: [String]?,
         birth: Date?,
+        mainSeries: [SeriesSummary]?,
         series: [SeriesSummary]?,
         comics: [ComicSummary]?
     ) {
@@ -60,6 +64,7 @@ public struct Character: Codable {
         self.realName = realName
         self.aliases = aliases
         self.birth = birth
+        self.mainSeries = mainSeries
         self.series = series
         self.comics = comics
     }
